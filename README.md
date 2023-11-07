@@ -1,2 +1,2 @@
 # Data-Structure-Algorithms
-DSA problems and solutions
+DSA problems and solutions.
