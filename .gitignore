@@ -1,2 +1,5 @@
+# VS code configuration folder
 .vscode/
+
+# C++ build files
 C++/Array & Hashing/*.exe
