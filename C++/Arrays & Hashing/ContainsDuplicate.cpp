@@ -39,7 +39,7 @@ Tets Cases
 Ideas & Complexity
 
 1. Brute force would be to have nested for loop and check if the element appears twice within the list. This would have O(n^2) time complexity. O(n) space complexity.
-This actually run into time complexity issues as I didn't facotr into the array being very very big.
+This actually ran into time complexity issues as I didn't factor in the array being very very big.
 2. Another way would be to sort the array and then just check if the adjacent elements match? O(nlogn) time and O(n) space complexity.
 3. The third option would be to have a set to which you keep on adding elements and it returns false if you add an element that already exists. O(n) space and time complexity.
 
