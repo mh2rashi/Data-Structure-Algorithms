@@ -42,11 +42,14 @@ Ideas
 1. Have a nested for loop and searh for two integers and return their indices. Time O(N^2), Space O(1).
 2. Have a map with the integer as key and index as value, and check to see if the SUM - CURRENT_INT exists within the map, if so then return both integers indexes.
 3. Sort the list and then have two pointers from each end and increment if the current sum is smaller and decrement the right pointer if the current sum is larger.
+4. You can also sort the list and then do a binary search - did not implement myself.
 
 Complexity:
 1. Time O(N^2), Space O(1).
 2. Time O(N), Space O(N).
 3. Time (ONlogN), Space O(1)
+4. Time O(n log n) for sorting and O(log n) for binary search. But binary
+search occurs n times so the total time taken here is O(nlogn). Space O(1).
 
 */
 
@@ -80,6 +83,44 @@ public:
             }
         }
         return {}; // Return empty vector if no solution found
+    }
+
+    int binarySearch(const vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size() - 1;
+
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target)
+                return mid;
+            else if (nums[mid] < target)
+                left = mid + 1;
+            else
+                right = mid - 1;
+        }
+        return -1; // If target is not found
+    }
+
+    vector<int> solution4(vector<int> nums, int target) {
+
+        sort(nums.begin(), nums.end());
+
+        // Iterate through each number in the array
+        for (int i = 0; i < nums.size(); i++) {
+            // Calculate the complement
+            int complement = target - nums[i];
+
+            // Perform binary search to find the complement in the sorted array
+            int complementIndex = binarySearch(nums, complement);
+
+            // If the complement is found and it's not the same element
+            if (complementIndex != -1 && complementIndex != i) {
+                // Return the indices of the two numbers
+                return {i, complementIndex};
+            }
+        }
+        // Return empty vector if no solution is found
+        return {};
     }
 
 };

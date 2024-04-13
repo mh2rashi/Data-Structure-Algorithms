@@ -47,14 +47,18 @@ Tets Cases
 
 
 Ideas
-1. Double for loop, th first loop will be on a specific string, and the inner for loop will check if the current string is an anagram of the string of the outer loop. if so, then we 
+1. Double for loop, the first loop will be on a specific string, and the inner for loop will check if the current string is an anagram of the string of the outer loop. if so, then we 
 will add the current list -> Problem with this solution is that if we iterate over a string that has already been added, than that would be a problem.
 2. Create a dictionary (string, vector<string>). Loop over the list, if the string (sorted) exists within the dicitonary, the append it to the list, otherwise, create the key and append the string to the list.
+3. Using the hint that the list only contains lowercase alphabets. If two strings are anagrams, then
+their frequency of characters is the same.
 
 
 Complexity:
-1. Time O(N^2), Space O(N).
-2. Time O(N), Space O(N).
+1. Time O(N^2 * k log k), Space O(N). where N is the number of strings and k is the 
+length of the longest string. -> problem solution
+2. Time O(N * k log k), Space O(N). where N is the number of strings and k is the 
+length of the longest string.
 
 
 */
