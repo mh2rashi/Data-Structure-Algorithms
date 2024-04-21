@@ -147,3 +147,14 @@ Here's the time complexity for each of the sorting algorithms:
 3. Does my problem match this pattern?
     - Yes, if both of these conditions are fulfilled (i) Input data is an array of intervals, (ii) problem states to deal with overlapping intervals, either to find their union, their intersection, or the gaps between them.
 
+#### 5. In-place Reversla of a Linked List
+1. Goal is to manipulate a Linked List without using any additional memory. 
+2. Iterate over the linked list while keeping track of three nodes: the current node, the next node, and the previous node. 
+3. Does my problem match this pattern?
+    - Yes, if both of these conditions are fulfilled (i) Linked list restructuring: The input data is given as a linked list, and the task is to modify its structure without modifying the data of the individual nodes, (ii) In-place modification: The modifications to the linked list must be made in place, that is, we're not allowed to use more than `O(1)` additional space.
+4. Problems that tackle this pattern:
+- ``
+
+#### 9. Modified Binary Search
+1. 
+
