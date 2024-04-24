@@ -158,3 +158,10 @@ Here's the time complexity for each of the sorting algorithms:
 #### 9. Modified Binary Search
 1. 
 
+
+#### 10. Subsets
+1. The goal of this pattern is to explore all possible combinations of elements from a given data structure. Useful for dealing with sets containing unique elements or array/lists that may contain duplicate elements.
+2. You build subsets incrementally, including or excluding each element of the original data structure, depending on the constraints of the problem. 
+3. Does my problem match this pattern?
+    - Yes, if you encounter (i) Permutations (return all possible permutations of an array of distinct integers) (ii) Combination sum (return all combinations of integers in an array that add up to a target number). The problem should ask us to generate combinations (or subsets) of the elements from the input data structure - could be the final solution or a step toward reaching the solution.
+

@@ -14,6 +14,7 @@ class Solution {
 public:
     int minMeetingRooms(vector<Interval>& intervals) {
 
+        // Memorize this for sorting as well.
         sort(intervals.begin(), intervals.end(), [](const Interval& a, const Interval& b) {
             return a.start < b.start;
         });
@@ -47,3 +48,6 @@ public:
         return max_rooms;
     }
 };
+
+
+// The neetcode solution is much clever which uses arrays for start and end time. Have a look over it.
